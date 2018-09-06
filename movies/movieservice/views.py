@@ -30,7 +30,7 @@ def index(request):
 	list = []
 	for movie in movielist:
 		list.append(movie + " - ")
-	return HttpResponse(movielist)
+	return HttpResponse(list)
 
 #def index(request):
 #    context = {
