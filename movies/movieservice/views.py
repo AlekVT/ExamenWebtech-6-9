@@ -15,7 +15,13 @@ if len(movielist) == 0:
 		movielist.append('film:' + line.split(" : ")[0])
 
 	for actor in actorlist:
-		r.sadd("film:" + actor.split(" : ")[0], actor.split(" : ")[1])
+		r.set("film:" + actor.split(" : ")[0], actor.split(" : ")[1])
+		print(actor.split(" : ")[1])
+else:
+	temp = []
+	for movie in movielist:
+		temp.append(movie.decode('utf-8').split(":")[1])
+	movielist = temp
 
 print(movielist)
 
@@ -27,8 +33,5 @@ def index(request):
 
 def actors(request):
 	movie_name = request.POST['movie_name']
-	actors = "not found"
-	for actors in actorlist:
-		if actors.startswith(movie_name):
-			actors = movie_name.split(" : ")[1]
+	actors = r.get("film:" + movie_name)
 	return HttpResponse(actors)
