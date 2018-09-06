@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 import redis
 
@@ -26,11 +27,18 @@ else:
 print(movielist)
 
 def index(request):
-    context = {
-        'movielist': movielist,
-    }
-    return render(request, 'movieservice/index.html', context)
+	list = []
+	for movie in movielist:
+		list.append(movie + " - ")
+	return HttpResponse(movielist)
 
+#def index(request):
+#    context = {
+#        'movielist': movielist,
+#    }
+#    return render(request, 'movieservice/index.html', context)
+
+@csrf_exempt
 def actors(request):
 	movie_name = request.POST['movie_name']
 	actors = r.get("film:" + movie_name)

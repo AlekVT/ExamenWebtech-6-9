@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb66c106-39e1-461a-9520-0e4da0d18b86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../movies/movieservice/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../movies/movieservice/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="fb66c106-39e1-461a-9520-0e4da0d18b86" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,12 +228,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536135509574</updated>
       <workItem from="1536135512307" duration="6697000" />
-      <workItem from="1536239712186" duration="4441000" />
+      <workItem from="1536239712186" duration="4473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11138000" />
+    <option name="totallyTimeSpent" value="11170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="749" extended-state="0" />
